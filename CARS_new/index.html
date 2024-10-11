@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="cars.css">
+   <link rel="icon" href="Frame 9.svg" size="16x16">
+   <title>Car Database</title>
+</head>
+
+<body>
+ <!--LICENSE SEARCH TEMPLATE-->
+   <div class="searchSection">
+      <h2 id="heading">Find Car Information</h2>
+
+      <div>
+         <label for="searchBy">By License:</label>
+         <input type="text" name="searchBy" id="searchBy">
+
+         <div><button type="submit" id="searchBtn">Search</button></div> 
+         
+      </div>
+   </div>
+
+    <!--FORM TEMPLATE-->
+   <div class="form-container">
+      <div id="message"></div>  <!--for display message in js.-->
+      <h2 id="heading">Car Information</h2>
+      <p><i>*All input fields required</i></p>
+   
+      <form id="inputForm">
+
+         <div>
+         <label for="license">License No.:</label>
+         <input type="text" name="license" id="license" placeholder="ABC 123">
+         </div>
+
+         <div>
+         <label for="maker">Maker:</label>
+         <input type="text" name="license-plate" id="maker" required>  
+         </div>
+
+         <div>
+         <label for="model">Model:</label>
+         <input type="text" name="model" id="model" required>
+         </div> 
+         
+         <div>
+         <label for="year"> Car Year:</label>
+         <input type="number" name="year" id="year" min="1886" max="2024" required>
+         </div> 
+
+         <div>
+         <label for="owner">Owner:</label>
+         <input type="text" name="owner" id="owner" required> 
+         </div>
+
+         <div>
+         <label for="price">Price:</label>
+         <input type="number" name="price" id="price" placeholder="1234567890"required> 
+         </div>
+
+         <div>
+         <label for="color">Colour:</label>
+         <input type="text" name="color" id="color">
+         </div>
+
+         <div><button type="submit" id="submitButton">Submit</button>
+         <div><button type="reset" id="resetBtn">Reset the form</button></div>
+
+      </form>
+      <p id="error-message" style="color:red"></p>
+
+      <!--DISPLAY TABLE TEMPLATE-->
+      <table id="display">
+         <thead>
+            <tr>
+               <th>LICENSE</th>
+               <th>MAKER</th>
+               <th>MODEL</th>
+               <th>YEAR</th>
+               <th>OWNER</th>
+               <th>PRICE</th>
+               <th>COLOUR</th>
+               <th>DISCOUNT</th>
+            </tr> 
+         </thead>
+         <tbody></tbody>
+      </table>
+   </div>
+   
+   <script src="cars.js"></script>
+
+</body>
+</html>
