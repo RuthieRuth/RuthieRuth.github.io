@@ -293,6 +293,10 @@ form input, form textarea{
 
 @media (max-width:860px){
 
+    body{
+        overflow-x: hidden;
+    }
+
     div.arrow{ 
         display: none;
     }
@@ -311,7 +315,12 @@ form input, form textarea{
 
     .brands{
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr); 
+        position: center;
+       /*  padding-right:10px;
+        width: 100px;
+        height: 100px; */
+        
     }
 
     .icon{
@@ -319,18 +328,23 @@ form input, form textarea{
     }
 
     .project-cards{
-        display: grid;
+        /* display: grid;
         grid-template-columns: repeat(1, 1fr);
         align-items: center;
         justify-content: center;
-        padding-left: 130px;
+        padding-left: 130px; */
+
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        position: center;
+        
     }
 
     .contact-container{
         display: flex;
         grid-template-columns: 1fr;
         flex-direction: column;
-
+        
     }
 
     #contact-notes{
@@ -339,10 +353,11 @@ form input, form textarea{
         margin-right: 20px;
         align-items: center;
         justify-content: center;
+        
     }
 
     #contact-form{
-        margin-top: 15%;
+        margin-top: 35%;
         position: relative;
     }
 
